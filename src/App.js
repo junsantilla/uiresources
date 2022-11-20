@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<div className="flex justify-end">
+				<div className="w-1/5 overflow-auto left-0 overflow-y-auto h-screen fixed">
+					<Navbar />
+				</div>
+				<div className="w-4/5 p-8 bg-slate-100 justify-self-end min-h-screen">
+					Content
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default App;
