@@ -34,7 +34,11 @@ function Icons() {
 									</td>
 									<td>{item.description}</td>
 									<td className="flex justify-end p-3">
-										<button className="btn">Visit</button>
+										<a href={item.url} target="_blank">
+											<button className="btn border-0 capitalize transition-none hover:text-primary-content hover:bg-primary hover:border-0">
+												Visit
+											</button>
+										</a>
 									</td>
 								</tr>
 							))}

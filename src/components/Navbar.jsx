@@ -20,7 +20,7 @@ function Navbar() {
 							<Link
 								key={i}
 								to={item.path}
-								className="flex items-center text-sm bg-base-200 hover:bg-base-300 px-4 py-2"
+								className="flex items-center text-sm bg-base-200 hover:bg-base-300 px-4 py-2 font-bold"
 							>
 								{item.title}
 							</Link>
