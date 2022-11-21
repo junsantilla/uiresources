@@ -120,78 +120,78 @@ const NavData = [
 		path: "/chrome-extensions",
 	},
 
-	{
-		title: "PatternPad",
-		path: "/Free and unlimited unique pattern designs.",
-	},
-	{
-		title: "Dimensions",
-		path: "/Dimensions.com is an ongoing reference database of dimensioned drawings documenting the standard measurements and sizes of the everyday objects and spaces",
-	},
-	{
-		title: "Freebiesbug",
-		path: "/Hand-picked resources for web designers and developers, constantly updated.",
-	},
-	{
-		title: "Flexiple",
-		path: "/One new high-quality, open-source illustration each day.",
-	},
-	{
-		title: "Cool Text",
-		path: "/Cool Text is a FREE graphics generator for web pages and anywhere else you need an impressive logo without a lot of design work",
-	},
-	{
-		title: "illustration kit",
-		path: "/Premium open source illustrations added daily",
-	},
-	{
-		title: "Doodad Pattern Generator",
-		path: "/Create unique, seamless, royalty-free patterns.",
-	},
-	{
-		title: "Pattern Monster",
-		path: "/A simple online pattern generator to create repeatable SVG patterns",
-	},
-	{
-		title: "Exemplar",
-		path: "/Free Avatar Library for Figma and Sketch",
-	},
-	{
-		title: "UIBundle",
-		path: "/Thousands of Free Design Resources like UI Kits, Mockups, Illustrations, Icons, Fonts, 3D assets, Templates and more.",
-	},
-	{
-		title: "openby.design",
-		path: "/Custom crafted free UI design resources, for personal and commercial projects. No attribution is required.",
-	},
-	{
-		title: "Design Stripe",
-		path: "/Create beautiful illustrations, no design skills needed.",
-	},
-	{
-		title: "HOLA SVG!",
-		path: "/An SVG playground to share SVG stuff.",
-	},
-	{
-		title: "symu.co",
-		path: "/Free templates, UI kits, icon, PSD",
-	},
-	{
-		title: "Mesh Gradient",
-		path: "/Generate & download beautiful mesh gradients.",
-	},
-	{
-		title: "CSS Shadow Gradients",
-		path: "/Generate CSS Gradients For Shadows.",
-	},
-	{
-		title: "Boring Avatars",
-		path: "/SVG random, cutely avatars collections",
-	},
-	{
-		title: "Others...",
-		path: "/others",
-	},
+	// {
+	// 	title: "PatternPad",
+	// 	path: "/Free and unlimited unique pattern designs.",
+	// },
+	// {
+	// 	title: "Dimensions",
+	// 	path: "/Dimensions.com is an ongoing reference database of dimensioned drawings documenting the standard measurements and sizes of the everyday objects and spaces",
+	// },
+	// {
+	// 	title: "Freebiesbug",
+	// 	path: "/Hand-picked resources for web designers and developers, constantly updated.",
+	// },
+	// {
+	// 	title: "Flexiple",
+	// 	path: "/One new high-quality, open-source illustration each day.",
+	// },
+	// {
+	// 	title: "Cool Text",
+	// 	path: "/Cool Text is a FREE graphics generator for web pages and anywhere else you need an impressive logo without a lot of design work",
+	// },
+	// {
+	// 	title: "illustration kit",
+	// 	path: "/Premium open source illustrations added daily",
+	// },
+	// {
+	// 	title: "Doodad Pattern Generator",
+	// 	path: "/Create unique, seamless, royalty-free patterns.",
+	// },
+	// {
+	// 	title: "Pattern Monster",
+	// 	path: "/A simple online pattern generator to create repeatable SVG patterns",
+	// },
+	// {
+	// 	title: "Exemplar",
+	// 	path: "/Free Avatar Library for Figma and Sketch",
+	// },
+	// {
+	// 	title: "UIBundle",
+	// 	path: "/Thousands of Free Design Resources like UI Kits, Mockups, Illustrations, Icons, Fonts, 3D assets, Templates and more.",
+	// },
+	// {
+	// 	title: "openby.design",
+	// 	path: "/Custom crafted free UI design resources, for personal and commercial projects. No attribution is required.",
+	// },
+	// {
+	// 	title: "Design Stripe",
+	// 	path: "/Create beautiful illustrations, no design skills needed.",
+	// },
+	// {
+	// 	title: "HOLA SVG!",
+	// 	path: "/An SVG playground to share SVG stuff.",
+	// },
+	// {
+	// 	title: "symu.co",
+	// 	path: "/Free templates, UI kits, icon, PSD",
+	// },
+	// {
+	// 	title: "Mesh Gradient",
+	// 	path: "/Generate & download beautiful mesh gradients.",
+	// },
+	// {
+	// 	title: "CSS Shadow Gradients",
+	// 	path: "/Generate CSS Gradients For Shadows.",
+	// },
+	// {
+	// 	title: "Boring Avatars",
+	// 	path: "/SVG random, cutely avatars collections",
+	// },
+	// {
+	// 	title: "Others...",
+	// 	path: "/others",
+	// },
 ];
 
 export default NavData;

@@ -1,8 +1,15 @@
 import { useState } from "react";
 import CollectionsData from "../data/CollectionsData";
+import { useLocation } from "react-router-dom";
 
 function Icons() {
 	const [collections, setCollections] = useState(CollectionsData);
+	const loc = useLocation();
+	const location = loc.pathname.substring(1);
+
+	const filtered = collections.filter((collection) => {
+		return collection.category === location;
+	});
 
 	return (
 		<div className="flex justify-end">
@@ -17,7 +24,7 @@ function Icons() {
 							</tr>
 						</thead>
 						<tbody>
-							{collections.map((item, i) => (
+							{filtered.map((item, i) => (
 								<tr
 									className="border-b border-base-200 hover:bg-base-200 "
 									key={i}
