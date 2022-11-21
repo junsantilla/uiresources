@@ -1,35 +1,24 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Collections from "./pages/Collections";
+import NavData from "./data/NavData";
 
 function App() {
+	const [nav, setNav] = useState(NavData);
+
 	return (
 		<>
-			<div className="flex justify-end">
-				<div className="w-1/5 overflow-auto left-0 overflow-y-auto h-screen fixed">
-					<Navbar />
-				</div>
-				<div className="w-4/5 p-8 border border-base-200 justify-self-end min-h-screen">
-					<div className="overflow-x-auto">
-						<table className="table w-full">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr className="hover">
-									<td>UI Design Daily</td>
-									<td>Awesome UI Components of all types</td>
-									<td className="flex justify-end">
-										<button className="btn">Visit</button>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
+			<Router>
+				<Navbar />
+				<Routes>
+					<Route path="/" element={<About />} />
+					{nav.map((item) => (
+						<Route path={item.path} element={<Collections />} />
+					))}
+				</Routes>
+			</Router>
 		</>
 	);
 }
