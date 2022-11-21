@@ -16,14 +16,14 @@ function Navbar() {
 						<a
 							key={item.id}
 							href="#test"
-							className="flex items-center rounded-lg bg-slate-100 hover:bg-slate-200 px-4 py-2"
+							className="flex items-center bg-base-200 hover:bg-base-300 px-4 py-2"
 						>
 							{item.title}
 						</a>
 					))}
 				</nav>
 			</div>
-			<div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
+			<div className="sticky inset-x-0 border-base-200 border-t ">
 				{/* footer */}
 			</div>
 		</div>
