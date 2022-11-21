@@ -1,5 +1,9 @@
 const NavData = [
 	{
+		title: "Home",
+		path: "/",
+	},
+	{
 		title: "UI Graphics",
 		path: "/ui-graphics",
 	},

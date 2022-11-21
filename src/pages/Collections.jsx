@@ -1,11 +1,11 @@
 import { useState } from "react";
 import CollectionsData from "../data/CollectionsData";
 import { useLocation } from "react-router-dom";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function Icons() {
-	const [collections, setCollections] = useState(CollectionsData);
-	const loc = useLocation();
-	const location = loc.pathname.substring(1);
+	const [collections] = useState(CollectionsData);
+	const location = useLocation().pathname.substring(1);
 
 	const filtered = collections.filter((collection) => {
 		return collection.category === location;
@@ -34,8 +34,15 @@ function Icons() {
 									</td>
 									<td>{item.description}</td>
 									<td className="flex justify-end p-3">
-										<a href={item.url} target="_blank">
-											<button className="btn border-0 capitalize transition-none hover:text-primary-content hover:bg-primary hover:border-0">
+										<a
+											href={item.url}
+											target="_blank "
+											className="w-max"
+										>
+											<button className="btn border-0 px-6  capitalize transition-none hover:text-primary-content hover:bg-primary hover:border-0">
+												<span className="mr-2">
+													<FaExternalLinkAlt />
+												</span>
 												Visit
 											</button>
 										</a>
