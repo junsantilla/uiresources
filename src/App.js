@@ -14,8 +14,12 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<About />} />
-					{nav.map((item) => (
-						<Route path={item.path} element={<Collections />} />
+					{nav.map((item, i) => (
+						<Route
+							key={i}
+							path={item.path}
+							element={<Collections />}
+						/>
 					))}
 				</Routes>
 			</Router>
