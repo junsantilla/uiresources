@@ -3,7 +3,7 @@ import NavData from "../data/NavData";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
-	const [nav, setNav] = useState(NavData);
+	const [nav] = useState(NavData);
 
 	const location = useLocation();
 

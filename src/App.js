@@ -6,15 +6,19 @@ import Collections from "./pages/Collections";
 import NavData from "./data/NavData";
 
 function App() {
-	const [nav, setNav] = useState(NavData);
+	const [nav] = useState(NavData);
 
 	return (
 		<Router>
 			<Navbar />
 			<Routes>
-				<Route path="/" element={<About />} />
+				<Route path="/" element={<About title="About" />} />
 				{nav.map((item, i) => (
-					<Route key={i} path={item.path} element={<Collections />} />
+					<Route
+						key={i}
+						path={item.path}
+						element={<Collections title={item.title} />}
+					/>
 				))}
 			</Routes>
 		</Router>

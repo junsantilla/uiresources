@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Topbar from "../components/Topbar";
 
-function Icons() {
+function Collections({ title }) {
 	const [collections] = useState(CollectionsData);
 	const location = useLocation().pathname.substring(1);
 
@@ -15,7 +15,7 @@ function Icons() {
 	return (
 		<>
 			<div className="w-4/5 overflow-auto fixed right-0 h-screen">
-				<Topbar />
+				<Topbar title={title} />
 				<div className="p-8">
 					<table className="table-auto w-full">
 						<thead className="text-left bg-base-200">
@@ -59,4 +59,4 @@ function Icons() {
 	);
 }
 
-export default Icons;
+export default Collections;
