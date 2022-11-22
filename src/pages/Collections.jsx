@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CollectionsData from "../data/CollectionsData";
 import { useLocation } from "react-router-dom";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import Topbar from "../components/Topbar";
 
 function Icons() {

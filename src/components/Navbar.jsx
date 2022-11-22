@@ -29,7 +29,7 @@ function Navbar() {
 							to={item.path}
 							className={
 								pathMatchRoute(item.path)
-									? "flex items-center text-sm px-4 py-2 font-bold bg-primary"
+									? "flex items-center text-sm px-4 py-2 font-bold bg-primary text-base-100"
 									: "flex items-center text-sm px-4 py-2 font-bold bg-base-200 hover:bg-base-300"
 							}
 						>
