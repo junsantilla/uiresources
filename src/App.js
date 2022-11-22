@@ -9,21 +9,15 @@ function App() {
 	const [nav, setNav] = useState(NavData);
 
 	return (
-		<>
-			<Router>
-				<Navbar />
-				<Routes>
-					<Route path="/" element={<About />} />
-					{nav.map((item, i) => (
-						<Route
-							key={i}
-							path={item.path}
-							element={<Collections />}
-						/>
-					))}
-				</Routes>
-			</Router>
-		</>
+		<Router>
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<About />} />
+				{nav.map((item, i) => (
+					<Route key={i} path={item.path} element={<Collections />} />
+				))}
+			</Routes>
+		</Router>
 	);
 }
 
