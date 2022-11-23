@@ -1,14 +1,17 @@
 import React from "react";
+import Footer from "../components/Footer";
+import Container from "../components/layout/Container";
 import Topbar from "../components/Topbar";
 
 function About({ title }) {
 	return (
-		<div className="w-4/5 overflow-auto fixed right-0 h-screen">
+		<Container>
 			<Topbar title={title} />
-			<div className="p-8">
+			<div className="p-8 grow">
 				<p>A huge collection of UI resources.</p>
 			</div>
-		</div>
+			<Footer />
+		</Container>
 	);
 }
 

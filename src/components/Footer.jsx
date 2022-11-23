@@ -4,7 +4,7 @@ import { BiGitPullRequest } from "react-icons/bi";
 
 function Footer() {
 	return (
-		<footer className=" bg-base-200 p-8 py-10 ">
+		<footer className=" bg-base-200 p-8 py-10">
 			<div className="flex align-middle mb-1">
 				<FaBug className="inline m-1 mr-2 text-md" />
 				<p>

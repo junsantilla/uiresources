@@ -2,6 +2,7 @@ import { useState } from "react";
 import CollectionsData from "../data/CollectionsData";
 import { useLocation } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Container from "../components/layout/Container";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 
@@ -14,9 +15,9 @@ function Collections({ title }) {
 	});
 
 	return (
-		<div className="w-4/5 overflow-auto fixed right-0 h-screen">
+		<Container>
 			<Topbar title={title} />
-			<div className="p-8">
+			<div className="p-8 grow">
 				<table className="table-auto w-full">
 					<thead className="text-left bg-base-200">
 						<tr className=" p-10">
@@ -55,7 +56,7 @@ function Collections({ title }) {
 				</table>
 			</div>
 			<Footer />
-		</div>
+		</Container>
 	);
 }
 
