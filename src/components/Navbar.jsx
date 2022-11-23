@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavData from "../data/NavData";
 import { Link, useLocation } from "react-router-dom";
+import DrawerButton from "../components/DrawerButton";
 
 function Navbar() {
 	const [nav] = useState(NavData);
@@ -14,11 +15,18 @@ function Navbar() {
 	};
 
 	return (
-		<div className="w-1/5 overflow-auto fixed h-screen">
-			<div className="px-4 py-6">
-				<Link to="/" className="font-bold text-lg hover:underline">
-					uiResources.io
-				</Link>
+		<div className="drawer-side lg:w-80">
+			<label htmlFor="my-drawer" className="drawer-overlay"></label>
+			<div className="px-4 py-6 bg-base-100 mr-20 lg:mr-0">
+				<div className=" flex justify-between">
+					<Link
+						to="/"
+						className="font-bold text-lg hover:underline inline"
+					>
+						uiResources.io
+					</Link>
+					<DrawerButton />
+				</div>
 				<nav
 					aria-label="Main Nav"
 					className="mt-6 flex flex-col space-y-1"
@@ -26,6 +34,7 @@ function Navbar() {
 					{nav.map((item, i) => (
 						<Link
 							key={i}
+							htmlFor="my-drawer"
 							to={item.path}
 							className={
 								pathMatchRoute(item.path)

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
-import Collections from "./pages/Collections";
+import Container from "./components/layout/Container";
 import NavData from "./data/NavData";
 
 function App() {
@@ -10,14 +10,13 @@ function App() {
 
 	return (
 		<Router>
-			<Navbar />
 			<Routes>
 				<Route path="/" element={<About title="About" />} />
 				{nav.map((item, i) => (
 					<Route
 						key={i}
 						path={item.path}
-						element={<Collections title={item.title} />}
+						element={<Container title={item.title} />}
 					/>
 				))}
 			</Routes>

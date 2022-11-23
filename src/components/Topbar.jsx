@@ -2,17 +2,19 @@ import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { themeChange } from "theme-change";
 
-function Topbar({ title }) {
+function Topbar({ title, drawerButton }) {
 	useEffect(() => {
 		themeChange(false);
 	}, []);
 
 	return (
-		<div className="flex w-full justify-between items-center bg-base-200 p-8 py-5">
-			<h1 className="font-bold text-2xl">{title}</h1>
-			<div className="flex items-center">
+		<div className="flex w-full flex-col lg:flex-row justify-between items-center bg-base-200 p-8 py-5">
+			<h1 className="font-bold text-2xl lg:grow">{title}</h1>
+
+			<div className="flex items-center mt-4 lg:mt-0">
+				{drawerButton}
 				<select
-					className="gradientselect mr-5 select"
+					className="gradientselect mr-3 select"
 					data-choose-theme
 				>
 					<option disabled value="">
@@ -33,7 +35,7 @@ function Topbar({ title }) {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<FaGithub className="text-3xl hover:text-primary" />
+					<FaGithub className="text-5xl hover:text-primary" />
 				</a>
 			</div>
 		</div>
