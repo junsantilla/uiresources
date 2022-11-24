@@ -37,7 +37,7 @@ function Navbar() {
 							htmlFor="my-drawer"
 							to={"/collections" + item.path}
 							className={
-								pathMatchRoute(item.path)
+								pathMatchRoute("/collections" + item.path)
 									? "flex items-center text-sm px-4 py-2 font-bold bg-primary text-base-100"
 									: "flex items-center text-sm px-4 py-2 font-bold bg-base-200 hover:bg-base-300"
 							}
