@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
-import Container from "./components/layout/Container";
+import Collections from "./pages/Collections";
 import NavData from "./data/NavData";
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
 				{nav.map((item, i) => (
 					<Route
 						key={i}
-						path={item.path}
-						element={<Container title={item.title} />}
+						path={"/collections" + item.path}
+						element={<Collections title={item.title} />}
 					/>
 				))}
 			</Routes>

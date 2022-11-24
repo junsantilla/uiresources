@@ -21,7 +21,7 @@ function Navbar() {
 				<div className=" flex justify-between">
 					<Link
 						to="/"
-						className="font-bold text-lg hover:underline inline"
+						className="font-bold text-lg hover:underline inline self-center"
 					>
 						uiResources.io
 					</Link>
@@ -29,13 +29,13 @@ function Navbar() {
 				</div>
 				<nav
 					aria-label="Main Nav"
-					className="mt-6 flex flex-col space-y-1"
+					className="mt-6 flex flex-col space-y-1 mb-8"
 				>
 					{nav.map((item, i) => (
 						<Link
 							key={i}
 							htmlFor="my-drawer"
-							to={item.path}
+							to={"/collections" + item.path}
 							className={
 								pathMatchRoute(item.path)
 									? "flex items-center text-sm px-4 py-2 font-bold bg-primary text-base-100"
