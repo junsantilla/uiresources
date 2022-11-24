@@ -48,7 +48,7 @@ function Collections({ title }) {
 							</div>
 						</div>
 					))}
-					<table className="table-auto w-full">
+					<table className="table-auto w-full hidden lg:block">
 						<thead className="text-left bg-base-200">
 							<tr className=" p-10">
 								<th className=" p-5">Name</th>
