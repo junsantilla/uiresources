@@ -20,11 +20,11 @@ function Collections({ title }) {
 			<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 			<div className="drawer-content flex flex-col">
 				<Topbar title={title} drawerButton={<DrawerButton />} />
-				<div className="p-5 grow">
-					<div className="mobile-list lg:hidden">
-						{filtered.map((item, i) => (
+				<div className="p-8 grow">
+					{filtered.map((item, i) => (
+						<div className="mobile-list lg:hidden" key={i}>
 							<div className="flex justify-between border-b border-base-200 hover:bg-base-200">
-								<div className=" " key={i}>
+								<div>
 									<div className="font-bold  p-3 px-4 pr-10">
 										<div className="text-lg">
 											{item.website}
@@ -40,15 +40,15 @@ function Collections({ title }) {
 										href={item.url}
 										target="_blank"
 										title="Visit"
+										rel="noreferrer"
 									>
 										<FaExternalLinkAlt />
 									</a>
 								</div>
 							</div>
-						))}
-					</div>
-
-					<table className="table-auto w-full hidden lg:block">
+						</div>
+					))}
+					<table className="table-auto w-full">
 						<thead className="text-left bg-base-200">
 							<tr className=" p-10">
 								<th className=" p-5">Name</th>
@@ -56,7 +56,6 @@ function Collections({ title }) {
 								<th></th>
 							</tr>
 						</thead>
-
 						<tbody>
 							{filtered.map((item, i) => (
 								<tr
@@ -66,12 +65,15 @@ function Collections({ title }) {
 									<td className="font-bold p-2 px-5 pr-14">
 										{item.website}
 									</td>
-									<td>{item.description}</td>
+									<td className="w-4/6">
+										{item.description}
+									</td>
 									<td className="flex justify-end p-3">
 										<a
 											href={item.url}
 											target="_blank "
 											className="w-max"
+											rel="noreferrer"
 										>
 											<button className="btn border-0 px-6  capitalize transition-none hover:text-primary-content hover:bg-primary hover:border-0">
 												<span className="mr-2">
