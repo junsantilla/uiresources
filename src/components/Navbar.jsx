@@ -1,10 +1,8 @@
-import { useState } from "react";
 import NavData from "../data/NavData";
 import { Link, useLocation } from "react-router-dom";
-import DrawerButton from "../components/DrawerButton";
 
 function Navbar() {
-	const [nav] = useState(NavData);
+	const nav = NavData;
 
 	const location = useLocation();
 
@@ -21,21 +19,22 @@ function Navbar() {
 				<div className=" flex justify-between">
 					<Link
 						to="/"
+						onClick={() => {
+							document.getElementById("my-drawer").click();
+						}}
 						className="font-bold text-lg hover:underline inline self-center"
 					>
 						uiResources.io
 					</Link>
-					<DrawerButton />
 				</div>
-				<nav
-					aria-label="Main Nav"
-					className="mt-6 flex flex-col space-y-1 mb-8"
-				>
+				<nav className="mt-6 flex flex-col space-y-1 mb-8">
 					{nav.map((item, i) => (
 						<Link
 							key={i}
-							htmlFor="my-drawer"
 							to={"/collections" + item.path}
+							onClick={() => {
+								document.getElementById("my-drawer").click();
+							}}
 							className={
 								pathMatchRoute("/collections" + item.path)
 									? "flex items-center text-sm px-4 py-2 font-bold bg-primary text-base-100"

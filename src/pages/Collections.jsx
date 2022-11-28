@@ -1,14 +1,12 @@
-import { useState } from "react";
 import CollectionsData from "../data/CollectionsData";
 import { useLocation } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Topbar from "../components/Topbar";
 import DrawerButton from "../components/DrawerButton";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 
 function Collections({ title }) {
-	const [collections] = useState(CollectionsData);
+	const collections = CollectionsData;
 	const location = useLocation().pathname.substring(13);
 
 	const filtered = collections.filter((collection) => {
@@ -16,7 +14,7 @@ function Collections({ title }) {
 	});
 
 	return (
-		<div className="drawer drawer-mobile">
+		<>
 			<input id="my-drawer" type="checkbox" className="drawer-toggle" />
 			<div className="drawer-content flex flex-col">
 				<Topbar title={title} drawerButton={<DrawerButton />} />
@@ -90,8 +88,7 @@ function Collections({ title }) {
 				</div>
 				<Footer />
 			</div>
-			<Navbar />
-		</div>
+		</>
 	);
 }
 
