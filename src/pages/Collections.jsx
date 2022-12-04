@@ -46,45 +46,37 @@ function Collections({ title }) {
 							</div>
 						</div>
 					))}
-					<table className="table-auto w-full hidden lg:block">
-						<thead className="text-left bg-base-200">
-							<tr className=" p-10">
-								<th className=" p-5">Name</th>
-								<th>Description</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							{filtered.map((item, i) => (
-								<tr
-									className="border-b border-base-200 hover:bg-base-200 "
-									key={i}
-								>
-									<td className="font-bold p-2 px-5 pr-14">
-										{item.website}
-									</td>
-									<td className="w-4/6">
-										{item.description}
-									</td>
-									<td className="flex justify-end p-3">
-										<a
-											href={item.url}
-											target="_blank "
-											className="w-max"
-											rel="noreferrer"
-										>
-											<button className="btn border-0 px-6  capitalize transition-none hover:text-primary-content hover:bg-primary hover:border-0">
-												<span className="mr-2">
-													<FaExternalLinkAlt />
-												</span>
-												Visit
-											</button>
-										</a>
-									</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
+
+					<div class="flex flex-col">
+						{filtered.map((item, i) => (
+							<div
+								className="flex flex-row border-b border-base-200 py-2 items-center hover:bg-base-200"
+								key={i}
+							>
+								<div className="w-2/6 p-4 py-2 font-bold">
+									{item.website}
+								</div>
+								<div className="w-4/6 p-4 py-2">
+									{item.description}
+								</div>
+								<div className="w-1/6 p-4 py-2 flex justify-end">
+									<a
+										href={item.url}
+										target="_blank "
+										className="w-max"
+										rel="noreferrer"
+									>
+										<button className="btn btn-sm border-0 px-6  capitalize transition-none hover:text-primary-content hover:bg-primary hover:border-0">
+											<span className="mr-2">
+												<FaExternalLinkAlt />
+											</span>
+											Visit
+										</button>
+									</a>
+								</div>
+							</div>
+						))}
+					</div>
 				</div>
 				<Footer />
 			</div>

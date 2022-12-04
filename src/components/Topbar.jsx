@@ -20,7 +20,7 @@ function Topbar({ title, drawerButton }) {
 					<option disabled value="">
 						Pick a theme
 					</option>
-					<option value="cupcake">Cupcake</option>
+					<option value="lofi">Lofi</option>
 					<option value="cyberpunk">Cyberpunk</option>
 					<option value="light">Light</option>
 					<option value="dark">Dark</option>
