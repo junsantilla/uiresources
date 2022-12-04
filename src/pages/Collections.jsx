@@ -20,16 +20,14 @@ function Collections({ title }) {
 				<Topbar title={title} drawerButton={<DrawerButton />} />
 				<div className="p-8 grow">
 					{filtered.map((item, i) => (
-						<div className="mobile-list lg:hidden" key={i}>
-							<div className="flex justify-between border-b border-base-200 hover:bg-base-200">
-								<div>
-									<div className="font-bold  p-3 px-4 pr-10">
-										<div className="text-lg">
-											{item.website}
-										</div>
-										<div className="font-normal text-md">
-											{item.description}
-										</div>
+						<div className="mobile-list" key={i}>
+							<div className="flex justify-between border-b border-base-300 hover:bg-base-200">
+								<div className="font-bold  p-4 pr-10">
+									<div className="text-lg">
+										{item.website}
+									</div>
+									<div className="font-normal text-sm mt-1">
+										{item.description}
 									</div>
 								</div>
 
@@ -46,37 +44,6 @@ function Collections({ title }) {
 							</div>
 						</div>
 					))}
-
-					<div class="flex flex-col">
-						{filtered.map((item, i) => (
-							<div
-								className="flex flex-row border-b border-base-200 py-2 items-center hover:bg-base-200"
-								key={i}
-							>
-								<div className="w-2/6 p-4 py-2 font-bold">
-									{item.website}
-								</div>
-								<div className="w-4/6 p-4 py-2">
-									{item.description}
-								</div>
-								<div className="w-1/6 p-4 py-2 flex justify-end">
-									<a
-										href={item.url}
-										target="_blank "
-										className="w-max"
-										rel="noreferrer"
-									>
-										<button className="btn btn-sm border-0 px-6  capitalize transition-none hover:text-primary-content hover:bg-primary hover:border-0">
-											<span className="mr-2">
-												<FaExternalLinkAlt />
-											</span>
-											Visit
-										</button>
-									</a>
-								</div>
-							</div>
-						))}
-					</div>
 				</div>
 				<Footer />
 			</div>
