@@ -6,7 +6,7 @@ function DrawerButton() {
 		<label htmlFor="my-drawer">
 			<label
 				htmlFor="my-drawer"
-				className="btn btn-primary drawer-button lg:hidden mr-3"
+				className="btn btn-sm btn-primary drawer-button lg:hidden mr-3"
 			>
 				<GiHamburgerMenu />
 			</label>

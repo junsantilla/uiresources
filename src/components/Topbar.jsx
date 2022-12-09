@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaStar } from "react-icons/fa";
 import { themeChange } from "theme-change";
+import Loading from "./Loading";
 
 function Topbar({ title, drawerButton }) {
 	useEffect(() => {
 		themeChange(false);
 	}, []);
 
+	const [loading, setLoading] = useState(true);
 	const [stars, setStars] = useState([]);
 
 	const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
@@ -23,6 +25,7 @@ function Topbar({ title, drawerButton }) {
 
 		const data = await response.json();
 		setStars(data.stargazers_count);
+		setLoading(false);
 	};
 
 	fetchRepo();
@@ -34,7 +37,7 @@ function Topbar({ title, drawerButton }) {
 			<div className="flex items-center mt-4 lg:mt-0">
 				{drawerButton}
 				<select
-					className="gradientselect mr-3 select"
+					className="gradientselect mr-3 select select-sm w-28"
 					data-choose-theme
 				>
 					<option disabled value="">
@@ -55,17 +58,23 @@ function Topbar({ title, drawerButton }) {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<FaGithub className="text-5xl hover:text-primary" />
+					<FaGithub className="text-4xl hover:text-primary" />
 				</a>
 				<a
 					href="https://github.com/junsantilla/uiresources.io/stargazers"
 					target="_blank"
 					rel="noreferrer"
 				>
-					<button className="btn btn-primary ml-3">
-						<FaStar className="mr-2" />
-						{stars}
-					</button>
+					{!loading ? (
+						<button className="btn btn-sm btn-primary ml-3">
+							<FaStar className="mr-2" />
+							{stars}
+						</button>
+					) : (
+						<div>
+							<Loading />
+						</div>
+					)}
 				</a>
 			</div>
 		</div>
