@@ -37,10 +37,10 @@ function Topbar({ title, drawerButton }) {
 			<div className="flex items-center mt-4 lg:mt-0">
 				{drawerButton}
 				<select
-					className="gradientselect mr-3 select select-sm w-28"
+					className="gradientselect mr-3 select select-sm w-28 lg:w-40"
 					data-choose-theme
 				>
-					<option disabled value="">
+					<option disabled selected value="">
 						Pick a theme
 					</option>
 					<option value="lofi">Lofi</option>

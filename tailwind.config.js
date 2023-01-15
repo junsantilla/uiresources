@@ -9,6 +9,7 @@ module.exports = {
 		scrollbar: ["dark"],
 	},
 	daisyui: {
-		themes: "lofi",
+		themes: "light",
+		darkTheme: "dark"
 	},
 };
