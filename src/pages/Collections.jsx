@@ -21,8 +21,14 @@ function Collections({ title }) {
 				<div className="p-8 grow">
 					{filtered.map((item, i) => (
 						<div className="mobile-list" key={i}>
-							<div className="flex justify-between border-b border-base-300 hover:bg-base-200">
-								<div className="font-bold  p-4 pr-10">
+							<div className="flex justify-start border-b border-base-300 hover:bg-base-200">
+								<div className=" m-4 mr-0 w-12 h-12">
+									<img
+										src={`https://ui-avatars.com/api/?name=${item.website}`}
+										alt="Avatar Tailwind CSS Component"
+									/>
+								</div>
+								<div className="font-bold grow p-4 pr-10">
 									<div className="text-lg">
 										{item.website}
 									</div>
