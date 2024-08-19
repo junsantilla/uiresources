@@ -4394,6 +4394,13 @@ const CollectionsData = [
 		url: "https://carbon-components-svelte.onrender.com/",
 	},
 	{
+		website: "SVAR Svelte Core",
+		description:
+			"A collection of 20+ essential UI components from simple buttons to date pickers and popups.",
+		category: "svelte-ui-libraries",
+		url: "https://svar.dev/svelte/core/",
+	},
+	{
 		website: "Magnus UI",
 		description:
 			"Magnus UI is the ultimate UI framework that helps you in building consistent user interfaces effortlessly in react native",
