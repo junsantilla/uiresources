@@ -24,7 +24,7 @@ function Navbar() {
 						}}
 						className="font-bold text-lg hover:underline inline self-center"
 					>
-						uiResources.io
+						uiResources
 					</Link>
 				</div>
 				<nav className="mt-6 flex flex-col space-y-1 mb-8">
