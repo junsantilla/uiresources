@@ -1,4 +1,4 @@
-# uiresources.io
+# uiresources
 
 This project is a huge collection of UI resources.
 
