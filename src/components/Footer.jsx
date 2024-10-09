@@ -10,7 +10,7 @@ function Footer() {
 				<p>
 					Do you see a bug?{" "}
 					<a
-						href="https://github.com/junsantilla/uiResources.io/issues"
+						href="https://github.com/junsantilla/uiResources/issues"
 						className="underline"
 						target="_blank"
 						rel="noreferrer"
@@ -25,7 +25,7 @@ function Footer() {
 				<p>
 					Do you want to contribute?{" "}
 					<a
-						href="https://github.com/junsantilla/uiResources.io/pulls"
+						href="https://github.com/junsantilla/uiResources/pulls"
 						className="underline"
 						target="_blank"
 						rel="noreferrer"
@@ -37,9 +37,9 @@ function Footer() {
 			<div className="flex align-middle mb-1">
 				<FaHeartbeat className="inline m-1 mr-2 text-md" />
 				<p>
-					Do you like uiResources.io?{" "}
+					Do you like uiResources?{" "}
 					<a
-						href="https://twitter.com/intent/tweet?text=A%20huge%20collection%20of%20UI%20resources%20https://github.com/junsantilla/uiResources.io"
+						href="https://twitter.com/intent/tweet?text=A%20huge%20collection%20of%20UI%20resources%20https://github.com/junsantilla/uiResources"
 						className="underline"
 						target="_blank"
 						rel="noreferrer"
